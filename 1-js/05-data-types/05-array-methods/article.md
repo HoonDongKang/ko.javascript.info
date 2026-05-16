@@ -239,7 +239,7 @@ arr.forEach(function(item, index, array) {
 - `arr.indexOf(item, from)`는 인덱스 `from`부터 시작해 `item(요소)`을 찾습니다. 요소를 발견하면 해당 요소의 인덱스를 반환하고, 발견하지 못했으면 `-1`을 반환합니다.
 - `arr.includes(item, from)`는 인덱스 `from`부터 시작해 `item`이 있는지를 검색하는데, 해당하는 요소를 발견하면 `true`를 반환합니다.
 
-일반적으로 위 메서드는 검색할 `item` 하나만 인수로 전달해 호출하며, 기본적으로 검색은 배열의 0번 인덱스부터 시작합니다.
+일반적으로 위 두 메서드는 검색할 `item` 하나만 인수로 전달해 호출하며, 기본적으로 검색은 배열의 0번 인덱스부터 시작합니다.
 
 예시:
 
@@ -731,7 +731,7 @@ alert(soldiers[1].age); // 23
 
 `thisArgs`에 `army`를 지정하지 않고 단순히 `users.filter(army.canJoin)`를 사용했다면 `army.canJoin`은 단독 함수처럼 취급되고, 함수 본문 내 `this`는 `undefined`가 되어 에러가 발생했을 겁니다.   
 
-`users.filter(user => army.canJoin(user))`를 사용하면 `users.filter(army.canJoin, army)`를 대체할 수 있긴 한데 `thisArg`를 사용하는 방식이 좀 더 이해하기 쉬우므로 더 자주 사용됩니다.
+`users.filter(army.canJoin, army)`는 `users.filter(user => army.canJoin(user))`로 대체할 수 있습니다. 두 방식은 동일하게 동작하지만, 후자가 좀 더 이해하기 쉬우므로 더 자주 사용됩니다.
 
 ## 요약
 
