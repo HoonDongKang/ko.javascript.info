@@ -731,7 +731,7 @@ alert(soldiers[1].age); // 23
 
 `thisArgs`에 `army`를 지정하지 않고 단순히 `users.filter(army.canJoin)`를 사용했다면 `army.canJoin`은 단독 함수처럼 취급되고, 함수 본문 내 `this`는 `undefined`가 되어 에러가 발생했을 겁니다.   
 
-`users.filter(army.canJoin, army)`는 `users.filter(user => army.canJoin(user))`로 대체할 수 있습니다. 두 방식은 동일하게 동작하지만, 후자가 좀 더 이해하기 쉬우므로 더 자주 사용됩니다.
+`thisArgs`를 사용하는 방식인 `users.filter(army.canJoin, army)`는 `users.filter(user => army.canJoin(user))`로 대체할 수 있습니다. 두 방식은 모두 동일하게 동작하지만, 전자보다 후자가 좀 더 이해하기 쉬우므로 더 자주 사용됩니다.
 
 ## 요약
 
