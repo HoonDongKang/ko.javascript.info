@@ -217,7 +217,7 @@ alert(arr.pop()); // World (메서드가 제대로 동작합니다.)
 
 이터러블을 사용한 예시는 다음과 같습니다.
 
-```js
+```js run
 // range는 챕터 위쪽 예시에서 그대로 가져왔다고 가정합시다.
 let arr = Array.from(range);
 alert(arr); // 1,2,3,4,5 (배열-문자열 형 변환이 제대로 동작합니다.)
@@ -232,7 +232,7 @@ Array.from(obj[, mapFn, thisArg])
 
 예시:
 
-```js
+```js run
 // range는 챕터 위쪽 예시에서 그대로 가져왔다고 가정합시다.
 
 // 각 숫자를 제곱

@@ -123,7 +123,7 @@ user.set("name", "John");
 user.set("age", "30");
 
 *!*
-// Map iterates as [key, value] pairs, very convenient for destructuring
+// Map은 [key, value] 쌍으로 순회하기 때문에 간편히 구조 분해 할당이 가능합니다.
 for (let [key, value] of user) {
 */!*
   alert(`${key}:${value}`); // name:John, then age:30
